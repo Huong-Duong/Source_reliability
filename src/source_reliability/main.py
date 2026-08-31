@@ -18,8 +18,15 @@ def main():
         sl = json.loads(sl_json)
 
         for type in sl:
+            color = type
+
+            if type == "preprint":
+                color = "red"
+            elif type == "medrs":
+                color = "green"
+
             for url in sl[type]:
-                url_reliability[url] = type
+                url_reliability[url] = color
 
     else:
         print(f"Error loading CiteHighlighter's list: HTTP {response.status_code}")
