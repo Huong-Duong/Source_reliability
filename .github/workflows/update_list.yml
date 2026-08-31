@@ -35,7 +35,7 @@ jobs:
 
       - name: Run application
         run: |
-          uv run run_app
+          uv run run-app
 
       - name: Commit and push updated source_reliability.json
         run: |
